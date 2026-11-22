@@ -1,4 +1,4 @@
-\from jes_sim import Sim
+from jes_sim import Sim
 from jes_ui import UI
 
 c_input = input("How many creatures do you want?\n100: Lightweight\n250: Standard (if you don't type anything, I'll go with this)\n500: Strenuous (this is what my carykh video used)\n")
