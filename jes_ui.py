@@ -11,13 +11,14 @@ import random
 
 class UI:
     def __init__(self, _W_W, _W_H, _MOVIE_SINGLE_DIM, _GRAPH_COOR, _SAC_COOR, _GENEALOGY_COOR,
-    _COLUMN_MARGIN, _MOSAIC_DIM, _MENU_TEXT_UP, _CM_MARGIN1, _CM_MARGIN2):
+    _COLUMN_MARGIN, _MOSAIC_DIM, _MENU_TEXT_UP, _CM_MARGIN1, _CM_MARGIN2, _FONT):
         self.sliderList = []
         self.buttonList = []
         pygame.font.init()
-        self.bigFont = pygame.font.Font('C:/Users/caryk/AppData/Local/Microsoft/Windows/Fonts/Jygquip 1.ttf', 60)
-        self.smallFont = pygame.font.Font('C:/Users/caryk/AppData/Local/Microsoft/Windows/Fonts/Jygquip 1.ttf', 30)
-        self.tinyFont = pygame.font.Font('C:/Users/caryk/AppData/Local/Microsoft/Windows/Fonts/Jygquip 1.ttf', 21)
+        self.fontDirectory = _FONT
+        self.bigFont = pygame.font.SysFont(self.fontDirectory, 60)
+        self.smallFont = pygame.font.SysFont(self.fontDirectory, 30)
+        self.tinyFont = pygame.font.SysFont(self.fontDirectory, 21)
         self.BACKGROUND_PIC = pygame.image.load("visuals/background.png")
         self.W_W = _W_W
         self.W_H = _W_H

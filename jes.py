@@ -1,4 +1,4 @@
-from jes_sim import Sim
+\from jes_sim import Sim
 from jes_ui import UI
 
 c_input = input("How many creatures do you want?\n100: Lightweight\n250: Standard (if you don't type anything, I'll go with this)\n500: Strenuous (this is what my carykh video used)\n")
@@ -19,11 +19,13 @@ _traits_extra=1, # heartbeat (time)
 _mutation_rate=0.07, _big_mutation_rate=0.025,
 _UNITS_PER_METER=0.05)
 
+font = input("choose a font (if you put blank i hate you)")
+
 # Cosmetic UI variables
 ui = UI(_W_W=1920, _W_H=1078, _MOVIE_SINGLE_DIM=(650,650),
 _GRAPH_COOR=(850,50,900,500), _SAC_COOR=(850,560,900,300), _GENEALOGY_COOR=(20,105,530,802,42),
 _COLUMN_MARGIN=330, _MOSAIC_DIM=[10,24,24,30], #_MOSAIC_DIM=[10,10,17,22],
-_MENU_TEXT_UP=180, _CM_MARGIN1=20, _CM_MARGIN2=1)
+_MENU_TEXT_UP=180, _CM_MARGIN1=20, _CM_MARGIN2=1, _FONT=font)
 
 sim.ui = ui
 ui.sim = sim
